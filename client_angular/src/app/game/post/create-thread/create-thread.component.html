@@ -1,0 +1,50 @@
+<div class="mainContent">
+  <app-breadcrumb [itemList]="itemListBreadcromb"></app-breadcrumb>
+  <div id="title">
+    <h4>Create Thread</h4>
+    <p>Buy Sell Trade {{item.name}}</p>
+  </div>
+  <form [formGroup]="form" style="padding: 1em">
+    <div class="row field">
+      <div class="col-md-3">
+        <mz-select-container>
+          <select mz-select [placeholder]="'Choose type'" formControlName="type">
+            <option *ngFor="let option of listOption">{{option}}</option>
+          </select>
+        </mz-select-container>
+
+      </div>
+      <div class="col-md-9">
+        <mz-input-container>
+          <input mz-input type="text" [label]="'Thread Title'" formControlName="name">
+        </mz-input-container>
+      </div>
+
+    </div>
+    <div class="row field">
+      <div class="col-md-12 col-ckeditor">
+        <ckeditor [(ngModel)]="ckeditorContent" [config]="{uiColor : '#000000', removePlugins:'elementspath,resize'} " formControlName="content"></ckeditor>
+      </div>
+    </div>
+    <div class="row field">
+      <div class="col-md-12 ">
+        <mz-input-container>
+          <input [label]="'Price'" mz-input type="text" formControlName="price">
+        </mz-input-container>
+      </div>
+    </div>
+    <div class="row field">
+      <div class="col-md-12 field">
+        <mz-input-container>
+          <input [label]="'Buy now link'" mz-input type="text" formControlName="link">
+        </mz-input-container>
+      </div>
+    </div>
+    <div class="element-align-center">
+        <input type="file" id="imgupload" (change)="onFileSelected($event)"  style="display: none" #fileinput />
+      <button (click)="fileinput.click()" type="button" class="btn btn-primary">Upload file/Image</button>
+      <input (click)="onCreateThread()" class="btn btn-primary" type="button"  value="Create Thread">
+      <input class="btn btn-primary" type="button" value="Preview">
+    </div>
+  </form>
+</div>

@@ -1,0 +1,28 @@
+<div id="test" class="mainContent">
+    <h4 style="text-align: center;">Login</h4>
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col offset-s4 offset-sm2 s4 sm6">
+                    <input id="email_and_username" class="validate" [(ngModel)]="user.username" name="email_and_username">
+                    <label for="email_and_username">Your name or email address</label>
+                </div>
+                <div class="input-field col offset-s4 offset-sm2 s4 sm6">
+                    <input id="password" type="password" class="validate" [(ngModel)]="user.password" name="password">
+                    <label for="password">Password</label>
+                    <a class="forgot-password">Forgot your password?</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col offset-s4 s4">
+                    <input id="remember-me" type="checkbox" class="filled-in" checked="checked" />
+                    <label for="remember-me">Remember me</label>
+                </div>
+            </div>
+            <div class="row">
+                <a class="waves-effect waves-light btn-primary btn col offset-s4 s4"
+                (click)="onLogin()">LOG IN</a>
+            </div>
+        </form>
+    </div>
+</div>

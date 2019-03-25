@@ -1,0 +1,30 @@
+//colors
+$color_gallery_approx: #000000;
+$black: black;
+
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #000000;
+  width: calc(100% + 32px);
+  margin-left: -16px;
+  margin-top: -16px;
+  border: 1px solid rgb(57, 57, 57);
+  li {
+    display: inline;
+    font-size: 14px;
+    a {
+      color: #969696;
+      text-decoration: none;
+      &:hover {
+        color: #ffffff;
+        text-decoration: none;
+      }
+    }
+    + li:before {
+      padding: 8px;
+      color: #969696;
+      content: "\203A";
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.forgot-password:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #2868ad;
+    font-weight: bold;
+}

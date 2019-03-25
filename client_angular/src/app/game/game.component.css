@@ -1,0 +1,51 @@
+.collapsible-header {
+  line-height: 1;
+  background: #2868ad url(/assets/images/navigation-tab.png) repeat-x top;
+  font-weight: bold;
+  border-bottom: 1px solid #357fce;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.collapsible-body {
+  padding: 0.5rem;
+  margin-bottom: -1.6rem;
+  border: 1px solid #2a2a2a;
+}
+
+.collapsible {
+  border-radius: 5px;
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 1px 0 0 transparent;
+}
+
+.input-field input {
+  padding-left: 2rem;
+  width: calc(100% - 2rem);
+}
+.input-field input:focus {
+  background-color: transparent;
+  border-bottom: 1px solid #2868ad;
+  box-shadow: 0 1px 0 0 transparent;
+}
+.input-field .label-icon {
+  left: 0;
+}
+
+.icon-search_clear {
+  color: #fff !important;
+  font-size: 1.5rem !important;
+  margin-top: 15px;
+}
+
+.icon-search {
+  color: #fff !important;
+}
+
+.label-icon i {
+  height: 22px;
+  line-height: 22px;
+  color: #fff;
+}
+
+/*# sourceMappingURL=game.component.css.map */

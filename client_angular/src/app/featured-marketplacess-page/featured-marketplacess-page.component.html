@@ -1,0 +1,9 @@
+<div class="mainContent">
+  <app-breadcrumb [itemList]="itemListBreadcromb"></app-breadcrumb>
+  <div class="marketplaces-title">
+    <h1 *ngIf="item">{{item.title}}</h1>
+    <p class="pageDescription" *ngIf="item">Buy Sell Trade: {{item.title}}</p>
+    <h1 *ngIf="!item">Empty Data</h1>
+  </div>
+  <featured-marketplaces [dataView]="data" [config]="config"></featured-marketplaces>
+</div>

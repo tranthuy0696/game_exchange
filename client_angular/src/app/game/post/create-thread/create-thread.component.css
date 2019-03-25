@@ -1,0 +1,36 @@
+.btn{
+    margin-left: 0.5em;
+    border: 1px solid #2868ad;
+    background-color:#2868ad;
+    
+}
+.btn:hover{
+    border: 1px solid  #217bd5;
+    background-color:#217bd5;
+}
+.field{
+    color: rgb(255, 255, 255);
+    background-color: rgb(30, 30, 30);
+    padding-top: 0em;
+
+}
+.col-ckeditor{
+    padding-left: 0em;
+    padding-right: 0em;
+
+}
+.element-align-center{
+    display: flex;
+    justify-content:center;
+
+}
+.dropdown-content{
+    background-color:  rgb(30, 30, 30)!important;
+    color: rgb(255, 255, 255);
+}
+#title{
+    padding: 0 1em;
+}
+
+
+

@@ -1,0 +1,138 @@
+.card {
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 61px 28px #000;
+  border-color: #474747;
+  border-top: 1px solid #474747;
+  border-bottom: 1px solid #474747;
+  height: 120px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 1s;
+}
+.card .footer-featured {
+  margin: 0;
+  padding: 0.5rem;
+}
+.card:hover {
+  box-shadow: inset 0 -1px 61px 28px #217bd5;
+  transform: scale(1.06);
+  z-index: auto;
+}
+.card:hover i {
+  color: #fff;
+  font-weight: 550;
+}
+.card:hover .lastest {
+  color: #000;
+}
+.card .card-content {
+  padding: 0.5rem;
+  padding-bottom: 0;
+  height: 100%;
+}
+.card .card-content .card-title {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+}
+.card .card-content .card-title:hover {
+  text-decoration: underline;
+}
+
+.icon-class {
+  background: #1e1e1e !important;
+  box-shadow: none !important;
+}
+.icon-class:hover {
+  background: #217bd5 !important;
+}
+.icon-class:hover .footer-featured {
+  background: #0a4b8c;
+}
+
+.row {
+  margin-bottom: 0;
+}
+
+.material-icons {
+  font-size: 14px;
+  color: #2096e1;
+  vertical-align: sub;
+}
+
+.lastest {
+  font-size: 13px;
+  color: #2096e1;
+  padding-right: 0;
+}
+
+.overflow-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+a {
+  color: #fff;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+  .node-list {
+    width: 50%;
+  }
+}
+.visible {
+  display: block;
+}
+
+.ic-person {
+  font-size: 20px;
+}
+
+.node-list {
+  float: left;
+  padding: 3px 7px;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .s4 {
+    width: 31% !important;
+  }
+
+  .visible {
+    display: none !important;
+  }
+
+  .node-list {
+    width: 100%;
+    padding: 0;
+  }
+
+  .card {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .node-list {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .node-list {
+    width: 33.33%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .node-list {
+    width: 33.33%;
+  }
+}
+
+/*# sourceMappingURL=featured-marketplaces.component.css.map */

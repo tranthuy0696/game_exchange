@@ -1,0 +1,73 @@
+<div class="row">
+  <li *ngFor="let item of dataView" class="node-list active">
+    <div class="card {{config.overClass}}"
+         [ngClass]="{'icon-class': item.icon}"
+         [ngStyle]="{'background': 'url('+ item.imgUrl + ') center center no-repeat'}">
+      <div class="card-content white-text">
+        <img *ngIf="item.icon" src="{{item.icon}}" style="float: left; margin-right: 0.5rem; margin-top: 0.3rem; border-radius: 50%;">
+        <span class="card-title"
+              (click)="config.onClickTitle(item)"
+              [routerLink]="['/games/marketplaces', item.id]">
+          {{item.title}}
+        </span>
+      </div>
+      <div class="row" style="display: flex; margin: 0.5rem; height: 2rem">
+        <div style="padding-right: 0.5rem">
+          <span><i class="material-icons">receipt</i>: {{item.listings}}</span>
+        </div>
+        <div class="visible" style="padding-right: 1rem"
+              *ngIf="item.categories">
+          <i class="material-icons">folder_open</i>: {{item.categories}} <i class="material-icons">arrow_drop_down</i>
+        </div>
+        <div style="flex: 1">
+          <span style="font-size: 11px"><i class="material-icons">access_time</i> {{item.today}}</span>
+        </div>
+      </div>
+      <div class="row footer-featured">
+        <div class="col s8 m8">
+          <div class="row">
+            <label class="lastest">Latest: </label>
+            <div class="col s8 m9" style="padding: 0 0.5rem; overflow: overlay;">
+              <a class="overflow-ellipsis">
+                {{item.latest}}
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col s4 m4" style="max-width: 6rem">
+          <div class="row">
+            <i style="margin-top: -0.3rem" class="material-icons ic-person">person</i>
+            <div class="col s8 m9" style="padding: 0 0 0 0.5rem; overflow: overlay;">
+              <a class="overflow-ellipsis">{{item.user}}</a>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+    </div>
+  </li>
+</div>
+
+<!-- <div class="row">
+    
+
+    <div class="col s12 m4">
+        <div class="card" style="background:url('assets/images/game_pokemon_go.png') no-repeat;">
+            <div class="card-content white-text">
+                <span class="card-title">Card Title</span>
+                <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12 m4">
+        <div class="card" style="background:url('assets/images/game_pokemon_go.png') no-repeat;">
+            <div class="card-content white-text">
+                <span class="card-title">Card Title</span>
+                <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+            </div>
+        </div>
+    </div>
+</div> -->

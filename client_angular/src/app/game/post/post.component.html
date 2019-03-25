@@ -1,0 +1,116 @@
+<div class="mainContent">
+    <app-breadcrumb [itemList]="itemListBreadcromb"></app-breadcrumb>
+  <div class="row " style="margin-bottom:2em ">
+    <div class="col-md-6">
+      <h5>{{item.parent}} - Buy Sell Trade</h5>
+      <i>Buy Sell Trade {{item.title}}</i>
+    </div>
+    <div class="col-md-6" style="display: flex;justify-content: flex-end;">
+      <button type="button" class="btn" [routerLink]="['/games/createThread']" >Post New Listing</button>
+    </div>
+
+  </div>
+  <div class="field pagination-field">
+    <mz-pagination [currentPage]="1" [enableFirstAndLastPageButtons]="true" [itemsPerPage]="10" [totalItems]="100">
+    </mz-pagination>
+  </div>
+  <div class="field content-field">
+    <div class="search-filter">
+      <!-- TODO -->
+    </div>
+    <div class="row title-list">
+      <p class="col-md-1 item"></p>
+      <p class="col-md-6 item">Title</p>
+      <p class="col-md-2 item">Price</p>
+      <p class="col-md-1 item">Feedback</p>
+      <p class="col-md-2 item">Buy now</p>
+    </div>
+    <div class="items-list" *ngFor="let post of item.posts">
+      <div class="row items">
+        <div class="col-md-1 center-parent">
+          <img style=" width: 4em;height: 4em;" src="{{post.owner.image}}" class="rounded-0">
+        </div>
+        <div class="col-md-6 title-card" >
+          <div class="head" >
+            <h5 style="font-size: 1.4em"  >
+              <a class="badge"  style="background-color:#2868ad; color: white; font-size: 1em; margin-right: 0.5rem">{{post.type}}</a>
+              <b [routerLink]="['/games/post/item']" >{{post.title}}
+              </b>
+            </h5>
+
+          </div>
+          <div  style="margin-bottom: 0.5rem">
+            <div class="col s9 m9">
+              <div class="row">
+                <div style="padding: 0 0.5rem; overflow: overlay;">
+                  <a class="overflow-ellipsis">
+                    {{post.owner.name}},
+                  </a>
+                </div>
+                <div style="padding: 0 0.5rem; overflow: overlay;">
+                  <a class="overflow-ellipsis">
+                    {{post.postDate}}
+                  </a>
+                </div>
+                <label>Replies:</label>
+                <div style="padding: 0 0.5rem; overflow: overlay;">
+                  <p class="overflow-ellipsis">
+                    {{post.replies}}
+                  </p>
+                </div>
+                <label> Views:</label>
+                <div style="padding: 0 0.5rem; overflow: overlay;">
+                  <p class="overflow-ellipsis">
+                    {{post.view}}
+                  </p>
+                </div>
+
+              </div>
+            </div>
+            <div class="col s3 m3" style="max-width: 8em;">
+              <div class="row">
+                <div class="col s10 m10" style="padding: 0 0 0 0.5rem; overflow: overlay;">
+                  Last Reply:
+                </div>
+                <i style="margin-top: -0.3rem" class="material-icons ic-person">person</i>
+
+              </div>
+            </div>
+
+
+
+          </div>
+
+        </div>
+        <div class="col-md-2 center-parent">
+          <b class="badge " style="background-color:#2868ad; color: white; font-size: 2em">${{post.price}}</b>
+        </div>
+        <div class="col-md-1 feedback-card  center-parent">
+          <div style="border: 1px solid #2868ad ">
+
+            <p style="text-align: center; margin:0.5em 0em ">{{post.feedback}}</p>
+
+            <b class="badge " style="background-color:#2868ad; color: white;width: 100%;">
+              <i mz-icon [align]="'center'" [icon]="'thumb_up'" [size]="'tiny'">
+              </i>
+            </b>
+          </div>
+
+        </div>
+        <div class="col-md-2 center-parent">
+          <button type="button" class="btn" >Buy now</button>
+        </div>
+
+      </div>
+
+    </div>
+    
+
+
+  </div>
+  <div class="field pagination-field">
+      <mz-pagination [currentPage]="1" [enableFirstAndLastPageButtons]="true" [itemsPerPage]="10" [totalItems]="100">
+      </mz-pagination>
+    </div>
+
+</div>

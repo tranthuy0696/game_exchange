@@ -1,0 +1,72 @@
+.btn{
+    margin-left: 0.5em;
+    border: 1px solid #2868ad;
+    background-color:#2868ad;
+    
+}
+.btn:hover{
+    border: 1px solid  #217bd5;
+    background-color:#217bd5;
+}
+.row{
+margin-bottom: 0em;
+}
+.field{
+    color: rgb(255, 255, 255);
+    background-color: rgb(30, 30, 30);
+
+}
+.pagination-field {
+  margin-top:2em;
+
+}
+
+.content-field{
+    margin-top:2em;
+    padding: 1em;
+    padding-top: 0em;
+    border-style: ridge;
+    border: 1px solid  rgb(54, 54, 54);
+    border-radius: 0.4em;
+    box-shadow: 0 0 1.2em rgba(0, 0, 0, 0.1);
+
+
+
+}
+.title-list{
+    border-color:#2868ad;
+    background-color:#2868ad;
+    margin-bottom: 0em;
+    border: 1px solid rgb(57, 57, 57);
+    box-shadow: 0 0 12px rgba(0,0,0,.1);
+}
+.item{
+    margin-bottom:0px;
+    padding: 1em;
+    text-align: center;
+   
+}
+.items{
+    border: 1px solid rgb(57, 57, 57);
+    height: 100%;
+    
+}
+.title-card{
+    color: rgb(255, 255, 255);
+    background-color:  rgb(42, 42, 42);
+    padding: 0em 1em;
+
+}
+.title-card .head{
+    min-height: 4rem ; padding-top: 0.5em ; margin-bottom: 1rem
+}
+
+.feedback-card{
+    color: rgb(255, 255, 255);
+    background-color:  rgb(42, 42, 42);
+}
+.center-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

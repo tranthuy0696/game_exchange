@@ -1,0 +1,39 @@
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css';
+body {
+    font-family: 'Open Sans',Arial,sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(30, 30, 30);
+    font-size: 13px;
+    line-height: 1.28;
+    text-size-adjust: 100%;
+}
+
+.mainContent {
+    background-color: rgb(42, 42, 42);
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(57, 57, 57);
+    box-shadow: 0 0 12px rgba(0,0,0,.1);
+}
+.pagination li.active {
+    background-color:#2868ad !important;
+}
+
+.dropdown-content{
+    color: rgb(255, 255, 255)!important;
+    background-color: rgb(30, 30, 30)!important;
+
+}
+.dropdown-content li>span, .dropdown-content li>a{
+    color: rgb(255, 255, 255)!important;
+
+}
+.dropdown-content li.disabled>span{
+    color: rgba(255, 255, 255, 0.63)!important;
+
+}
+
+
+
+

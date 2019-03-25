@@ -1,0 +1,43 @@
+<div class="mainContent">
+    <div class="input-field">
+        <input id="search" type="search" placeholder="SEARCH FOR YOUR GAME/MARKETPLACE">
+        <label class="label-icon" for="search"><i class="material-icons icon-search">search</i></label>
+        <i class="material-icons icon-search_clear">close</i>
+    </div>
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header">FEATURED MARKETPLACES</div>
+            <div class="collapsible-body">
+                <featured-marketplaces [dataView]="data.games"></featured-marketplaces>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header">MAIN MARKETPLACES</div>
+            <div class="collapsible-body">
+              <featured-marketplaces [dataView]="data.masketings"></featured-marketplaces>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header">DISPUTES</div>
+            <div class="collapsible-body">
+              <featured-marketplaces [dataView]="data.disputes"></featured-marketplaces>
+            </div>
+        </li>
+
+    </ul>
+
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header">SUPPORT</div>
+            <div class="collapsible-body">
+              <featured-marketplaces [dataView]="data.support"></featured-marketplaces>
+            </div>
+        </li>
+    </ul>
+</div>

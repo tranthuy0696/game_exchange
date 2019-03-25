@@ -1,0 +1,6 @@
+<ul class="breadcrumb">
+  <li *ngFor="let item of itemList">
+    <a href="#" routerLink="item.path" *ngIf="!item.active">{{item.title}}</a>
+    <span *ngIf="item.active">{{item.title}}</span>
+  </li>
+</ul>

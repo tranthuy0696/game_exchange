@@ -1,0 +1,24 @@
+[
+    {
+        "method": ["ALL"],
+        "api": "/api/games",
+        "role": "admin"
+    },
+    {
+        "method": ["ALL"],
+        "api": "/api/items",
+        "role": "admin"
+    },
+    {
+        "method": ["ALL"],
+        "api": "/api/posts",
+        "role": ""
+    },
+    {
+        "method": ["ALL"],
+        "api": "/api/posts/:id/comments",
+        "role": ""
+    }
+]
+
+//TODO: using to authority

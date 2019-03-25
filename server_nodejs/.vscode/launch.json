@@ -1,0 +1,52 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "protocol": "inspector",
+      "request": "launch",
+      "name": "Launch Program",
+      "program": "${workspaceFolder}/server.js",
+      "env": {
+        "PORT": "8888",
+        // "PCN_DB_USER": "pcnadmin",
+        // "PCN_DB_PWD": "pcnadmin",
+        "DB_URL": "localhost:27017/game_exchange",
+        "SECRET": "This1s4Rand0m",
+        "LOG_ENABLED": "true",
+        "http_proxy": "",
+        "https_proxy": ""
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "protocol": "inspector",
+      "request": "launch",
+      "name": "Initialize Database",
+      "program": "${workspaceFolder}/setup/init.js",
+      "env": {
+        "PORT": "8888",
+        "SECRET": "This1s4Rand0m",
+        "DB_URL": "localhost:27017/game_exchange",
+        "http_proxy": "",
+        "https_proxy": ""
+      }
+    },
+    {
+      "type": "node",
+      "protocol": "inspector",
+      "request": "launch",
+      "name": "Start Production",
+      "program": "${workspaceFolder}/dist/server.js",
+      "env": {
+        "DB_URL": "localhost:27017/game_exchange",
+        "SECRET": "This1s4Rand0m",
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}

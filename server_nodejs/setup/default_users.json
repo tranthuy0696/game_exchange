@@ -1,0 +1,32 @@
+{
+    "users": [
+      {
+        "username": "admin",
+        "email": "admin@gmail.com",
+        "role": "master",
+        "firstName": "",
+        "lastName": "",
+        "enabled": true,
+        "image": ""
+      },
+      {
+        "username": "normal",
+        "email": "normal@gmail.com",
+        "role": "normal",
+        "firstName": "",
+        "lastName": "",
+        "enabled": true,
+        "image": ""
+      },
+      {
+        "username": "user",
+        "email": "user@gmail.com",
+        "role": "user",
+        "firstName": "",
+        "lastName": "",
+        "enabled": true,
+        "image": ""
+      }
+    ]
+  }
+  

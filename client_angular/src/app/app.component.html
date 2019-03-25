@@ -1,0 +1,138 @@
+<div class="container-main-app">
+    <div id="topBar"  class="container">
+      <div class="formLogin">
+        <label *ngIf="!isShowLogin && !isLogin()" class="label-text">
+          <a (click)="onShowLogin()">Log in or sign up</a>
+        </label>
+        <label *ngIf="isShowLogin" class="login-close" (click)="onClose()">X</label>
+      </div>
+      <div *ngIf="isLogin()" class="user-profile">
+        <div class="user-info">
+          <i class="material-icons ic-person">person</i>
+          <label class="login-username">nkduy</label>
+        </div>
+        <div class="conversations">
+          <i class="material-icons ic-person">email</i>
+        </div>
+        <div class="notifications">
+          <i class="material-icons ic-person">notifications</i>
+        </div>
+        <div class="tools">
+          <i class="material-icons ic-person">settings</i>
+        </div>
+        <div class="credits">Credits 0.00$</div>
+      </div>
+      <div style="display: none" [ngClass]="{'form-login': !isShowLogin, 'form-login login-active': isShowLogin}">
+        <form style="width: 50%">
+          <div class="input-field">
+            <input id="username" type="text" class="validate" [(ngModel)]="user.username" name="email_and_username">
+            <label for="username">Username or email</label>
+          </div>
+          <div class="input-field">
+            <input id="password" type="password" class="validate" [(ngModel)]="user.password" name="password">
+            <label for="password">Password</label>
+          </div>
+          <div class="remember-forgot">
+            <p>
+              <input id="remember-me" type="checkbox" class="filled-in" checked="checked" />
+              <label for="remember-me">Remember me</label>
+            </p>
+            <a class="forgot-password">Forgot your password?</a>
+          </div>
+
+          <div class="btn-login-group">
+            <a class="waves-effect waves-light btn btn-login" (click)="onLogin()">Login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+      <!--<div class="form-group">-->
+        <!--<label class="label-text" for="username">Username or email</label>-->
+        <!--<input id="username" type="text" class="validate" name="username">-->
+      <!--</div>-->
+      <!--<div class="form-group">-->
+        <!--<label class="label-text" for="password">Password</label>-->
+        <!--<input id="password" type="password" class="validate" name="password">-->
+      <!--</div>-->
+      <!--<button class="btn btn-primary ">Login</button>-->
+    <!--</div>-->
+    <nav class="nav-extended">
+      <div class="nav-wrapper logoBlock row container">
+        <div class="col s12 m8 l9">
+          <a href="#" class="brand-logo">
+            <img style="width: 100%" src="https://www.playerup.com/styles/playerup/playerup/logo1.png">
+          </a>
+        </div>
+        <div class="col s12 m4 l3">
+          <div class="input-field input-search-container input-search-top">
+            <i class="tiny material-icons prefix">search</i>
+            <input id="search-your-name" type="text" class="input-search" placeholder="Enter Your Game...">
+            <!--<label for="icon_telephone">Telephone</label>-->
+          </div>
+        </div>
+      </div>
+      <div class="nav-content">
+        <div class="col s12 container">
+          <ul class="tabs tabs-transparent">
+            <li class="tab"
+                routerLink="{{item.routerLink}}"
+                (click)="onClickItemMenu(item.items)"
+                *ngFor="let item of menu">
+              <a href="#{{item.id}}">{{item.title}}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="container-btn col s12">
+          <div class="row container">
+            <div class="col s12 m8 l9 large-btn">
+              <button id="{{item.id}}"
+                      routerLink="{{item.routerLink}}"
+                      *ngFor="let item of menuButon">
+                {{item.title}}
+              </button>
+            </div>
+            <div class="col s12 m4 l3 input-field input-search-container input-search-key">
+              <i class="tiny material-icons prefix">search</i>
+              <input type="text" class="input-search" placeholder="Enter Keywords and Search...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="container">
+        <router-outlet></router-outlet>
+    </main>
+    <footer class="page-footer row">
+      <div class="container">
+        <div class="col s4">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col s4">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col s4">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-copyright footerLegal">
+        <div class="container">
+          © 2014 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
+</div>

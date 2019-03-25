@@ -1,0 +1,58 @@
+//colors
+$color_azure_approx: #2868ad;
+$color_mariner_approx: #357fce;
+$color_shark_approx: #2a2a2a;
+$white: #fff;
+
+//urls
+$url_0: url(/assets/images/navigation-tab.png);
+
+.collapsible-header {
+  line-height: 1;
+  background: $color_azure_approx $url_0 repeat-x top;
+  font-weight: bold;
+  border-bottom: 1px solid $color_mariner_approx;
+  font-size: 12px;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 5px;
+}
+.collapsible-body {
+  padding: 0.5rem;
+  margin-bottom: -1.6rem;
+  border: 1px solid $color_shark_approx;
+}
+.collapsible {
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 5px;
+  border: 1px solid $color_shark_approx;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 1px 0 0 transparent;
+}
+.input-field {
+  input {
+    padding-left: 2rem;
+    width: calc(100% - 2rem);
+    &:focus {
+      background-color: transparent;
+      border-bottom: 1px solid $color_azure_approx;
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 1px 0 0 transparent;
+    }
+  }
+  .label-icon {
+    left: 0;
+  }
+}
+.icon-search_clear {
+  color: $white !important;
+  font-size: 1.5rem !important;
+  margin-top: 15px;
+}
+.icon-search {
+  color: $white !important;
+}
+.label-icon i {
+  height: 22px;
+  line-height: 22px;
+  color: $white;
+}

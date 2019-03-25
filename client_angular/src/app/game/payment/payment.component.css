@@ -1,0 +1,42 @@
+hr{
+    background-color: rgba(240, 248, 255, 0.178);
+}
+.btn{
+    width: 20em;
+    height: 3em;;
+    padding: auto 3em;
+    margin-left: 0.5em;
+    border: 1px solid #2868ad;
+    background-color:#2868ad;
+    
+}
+.btn:hover{
+
+    border: 1px solid  #217bd5;
+    background-color:#217bd5;
+}
+.field{
+    color: rgb(255, 255, 255);
+    background-color: rgb(30, 30, 30);
+
+}
+.mainContent div #content div{
+    padding: 1em;
+}
+.mainContent div #total b{
+    padding: 1em;
+    font-size: 24px;
+}
+.title-list{
+    border-color:#2868ad;
+    background-color:#2868ad;
+    margin-bottom: 0em;
+    border: 1px solid rgb(57, 57, 57);
+    box-shadow: 0 0 12px rgba(0,0,0,.1);
+}
+.title-list b{
+    margin-bottom:0px;
+    padding: 1em;
+    text-align: left;
+   
+}
